@@ -135,11 +135,7 @@ export function PlantSelect() {
             handleFetchMore(distanceFromEnd)
           }
           ListFooterComponent={
-            loadingMore ? (
-              <ActivityIndicator color={colors.green} />
-            ) : (
-              <Text> </Text>
-            )
+            loadingMore ? <ActivityIndicator color={colors.green} /> : <></>
           }
         />
       </View>
