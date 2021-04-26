@@ -94,7 +94,7 @@ export function PlantSelect() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Header />
+        <Header title="Olá" marginTopHeader={50} />
 
         <Text style={styles.title}>Em qual hambiente</Text>
         <Text style={styles.subtitle}>você quer colocar sua planta?</Text>

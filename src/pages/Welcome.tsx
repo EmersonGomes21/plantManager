@@ -13,11 +13,15 @@ import { useNavigation } from "@react-navigation/core";
 import watering from "../assets/watering.png";
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
+import { hasName } from "../libs/storage";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 export function Welcome() {
   const navigation = useNavigation();
 
-  function handleStart() {
-    navigation.navigate("UserIdentification");
+  async function handleStart() {
+      const  name = await hasName();
+    if (name ) navigation.navigate("PlantSelect");
+    else navigation.navigate("UserIdentification");
   }
   return (
     <SafeAreaView style={styles.container}>
